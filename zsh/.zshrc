@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export PATH="$HOME/.lkutils/bin:$PATH"
+
 # Path to Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
