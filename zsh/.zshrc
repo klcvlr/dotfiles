@@ -9,7 +9,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # Configuration for Volta, the JavaScript Tool Manager
-export VOLTA_HOME="$HOME/.volta"
 
 # Initialize starship prompt
 eval "$(starship init zsh)"
@@ -47,3 +46,5 @@ alias ll='exa -al'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
