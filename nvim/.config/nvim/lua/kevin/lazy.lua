@@ -37,13 +37,19 @@ require('lazy').setup({
   -- Better date increments
   'tpope/vim-speeddating',
 
-
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
+
+  {
+    'pwntester/octo.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+    },
+  },
 
 
   -- NOTE: This is where your plugins related to LSP can be installed.
@@ -182,16 +188,9 @@ require('lazy').setup({
 
   ----------- Expermenting -----------
 
-  {
-    'pwntester/octo.nvim',
-    dependencies = {
-      'nvim-telescope/telescope.nvim',
-    },
-  },
-
   -- Debugging
-  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
   'theHamsta/nvim-dap-virtual-text',
+  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
 
 })
 
