@@ -13,6 +13,7 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 # Initialize starship prompt
 eval "$(starship init zsh)"
 
+
 # Oh My Zsh plugins configuration
 plugins=(
   aws
@@ -23,8 +24,13 @@ plugins=(
   kubectl
   minikube
   sdk
+  thefuck
   tmux
+  web-search
   z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  zsh-vi-mode
 )
 
 # Source Oh My Zsh script
@@ -41,6 +47,9 @@ alias la='exa -a'
 alias l='exa -al'
 alias ll='exa -al'
 
+# Add fzf completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # SDKMAN (Software Development Kit Manager) initialization
 # Note: This should be at the end of the file for SDKMAN to initialize properly.
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -48,3 +57,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
