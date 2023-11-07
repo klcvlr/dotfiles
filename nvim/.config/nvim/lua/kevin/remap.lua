@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Disable inefficient motions
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.keymap.set({ 'n', 'v' }, '<Bs>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<BS>', '<Nop>', { silent = true })
 
 -- Yank to clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["*y]])
