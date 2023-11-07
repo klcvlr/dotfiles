@@ -1,0 +1,73 @@
+" To get a list of Actions run `:actionlist `
+let mapleader = " "
+
+" options
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set visualbell
+set noerrorbells
+set history=1000
+set clipboard+=unnamed
+set surround
+set commentary
+set ideajoin
+
+" keymaps
+inoremap jk <Esc>
+vnoremap <leader>p "_dp
+nnoremap <leader>p "_diwP
+nnoremap <leader>c "_c
+nnoremap <leader>C "_C
+nnoremap Y y$
+nnoremap <Leader>/ :noh<cr>
+nnoremap <Leader>r :set rnu!<cr>
+nnoremap <C-H> :action SelectInProjectView<CR>
+
+" Telescope-like
+noremap <Leader>ff :action GotoFile<CR>
+noremap <Leader>fg :action FindInPath<CR>
+noremap <Leader>fo :action GotoSymbol<CR>
+noremap <Leader>fu :action FindUsages<CR>
+
+" keymaps to jetbrains actions
+nnoremap <Leader>w :action HideAllWindows<CR>
+nnoremap <Leader>t :action QuickTypeDefinition<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gt :action GotoTypeDeclaration<CR>
+nnoremap go :action Back<CR>
+nnoremap dm :action ToggleBookmark<CR>
+
+" Debug
+nnoremap <Leader>dm :action ToggleBreakpointEnabled<CR>
+nnoremap <Leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>dc :action Resume<CR>
+nnoremap <Leader>dc :action RunToCursor<CR>
+nnoremap <Leader>dn :action StepOver<CR>
+nnoremap <Leader>di :action StepInto<CR>
+nnoremap <Leader>de :action EvaluateExpression<CR>
+nnoremap <leader>e :action GotoNextError<CR>
+nnoremap <leader>E :action GotoPreviousError<CR>
+
+" Quick Quit
+nnoremap <leader>q :q <CR>
+
+
+" View my customize Quicklist
+nmap <Leader><leader>l :action QuickList.MyList<CR>
+
+" Commenting
+nmap <Leader>cc :action CommentByLineComment<CR>
+nmap <Leader>cb :action CommentByBlockComment<CR>
+nmap <Leader>c<Space> :action CommentByLineComment<CR
+nmap <Leader>cb<Space> :action CommentByBlockComment<CR>
+
+
+" Put search results in the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz
+
