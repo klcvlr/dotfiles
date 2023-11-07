@@ -42,10 +42,10 @@ alias vim='nvim'
 
 # Using alternative tools for file viewing
 alias c='bat'
-alias ls='exa'
-alias la='exa -a'
-alias l='exa -al'
-alias ll='exa -al'
+alias ls='eza'
+alias la='eza -a'
+alias l='eza -al'
+alias ll='eza -al'
 
 # Add fzf completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
