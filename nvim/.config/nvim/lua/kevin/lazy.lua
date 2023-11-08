@@ -43,6 +43,9 @@ require('lazy').setup({
     -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
 
+    -- Vim transparent
+    'xiyaowong/transparent.nvim',
+
     -- Git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
@@ -133,7 +136,7 @@ require('lazy').setup({
     },
 
     -- Theme
-    { 'catppuccin/nvim', name = 'catppuccin' },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     {
         -- Set lualine as statusline
