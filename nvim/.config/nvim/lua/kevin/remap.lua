@@ -36,6 +36,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Sessionize (tmux-sessionizer)
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww f<CR>")
+
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })

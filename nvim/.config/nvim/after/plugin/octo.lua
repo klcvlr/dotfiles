@@ -148,3 +148,5 @@ always_select_remote_on_create = "false" -- always give prompt to select base re
   }
 })
 
+vim.api.nvim_set_keymap('n', '<leader>pr', '<Cmd>Octo pr list<CR>', { noremap = true, silent = true })
+
