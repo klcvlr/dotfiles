@@ -207,19 +207,18 @@ require('lazy').setup({
         opts = {
             window = {
                 width = .85,
-            }
+            },
         }
     },
 
     -- {
-    --     "m4xshen/hardtime.nvim",
-    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    --     opts = {}
-    -- },
+        --     "m4xshen/hardtime.nvim",
+        --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        --     opts = {}
+        -- },
 
-    -- Debugging
-    'theHamsta/nvim-dap-virtual-text',
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
-
-})
+        -- Debugging
+        'theHamsta/nvim-dap-virtual-text',
+        { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
+    })
 

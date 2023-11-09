@@ -54,6 +54,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
 vim.keymap.set('n', '<leader>gl', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, {})
 
 vim.keymap.set('n', '<leader>tr', '<Cmd>TransparentToggle<CR>', {})
 
