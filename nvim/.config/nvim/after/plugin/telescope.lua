@@ -1,9 +1,9 @@
 -- Load and configure the Telescope plugin with default settings.
-require('telescope').setup{
-    defaults = {
-        -- Better for displaying long path in pickers
-        path_display = { "smart" }
-    }
+require('telescope').setup {
+  defaults = {
+    -- Better for displaying long path in pickers
+    path_display = { "smart" }
+  }
 }
 
 -- Enable telescope fzf native, if installed
@@ -12,8 +12,25 @@ pcall(require('telescope').load_extension, 'harpoon')
 
 local builtin = require('telescope.builtin')
 
+local function live_grep_search_hidden()
+  builtin.live_grep {
+    hidden = true,
+    file_ignore_patterns = { ".git" },
+  }
+end
+
+local function find_dotfiles()
+  builtin.find_files {
+    prompt = "~ dotfiles ~",
+    cwd = "~/dotfiles",
+    hidden = true,
+    file_ignore_patterns = { ".git" },
+    height = 10,
+  }
+end
+
 local function find_files_show_hidden()
-  builtin.find_files{
+  builtin.find_files {
     hidden = true,
     file_ignore_patterns = { ".git" },
   }
@@ -37,9 +54,10 @@ vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Search [G]it [F]i
 vim.keymap.set('n', '<leader>sf', find_files_show_hidden, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sg', live_grep_search_hidden, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>sdf', find_dotfiles, { desc = '[S]earch [D]ot [F]iles' })
 
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
@@ -52,4 +70,3 @@ vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, {})
 
 
 vim.keymap.set('n', '<leader>tr', '<Cmd>TransparentToggle<CR>', {})
-

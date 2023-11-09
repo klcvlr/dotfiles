@@ -20,14 +20,13 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 
     -- Theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
+    { "catppuccin/nvim",           name = "catppuccin", priority = 1000 },
 
     -- harpoon
     'ThePrimeagen/harpoon',
 
     -- LSP and completion plugins
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
 
     -- Sensible defaults for vim configuration
     'tpope/vim-sensible',
@@ -123,7 +122,8 @@ require('lazy').setup({
                 changedelete = { text = '~' },
             },
             on_attach = function(bufnr)
-                vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk, { buffer = bufnr, desc = 'Preview git hunk' })
+                vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk,
+                    { buffer = bufnr, desc = 'Preview git hunk' })
 
                 -- don't override the built-in and fugitive keymaps
                 local gs = package.loaded.gitsigns
@@ -209,8 +209,7 @@ require('lazy').setup({
         }
     },
 
-        -- Debugging
-        'theHamsta/nvim-dap-virtual-text',
-        { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
-    })
-
+    -- Debugging
+    'theHamsta/nvim-dap-virtual-text',
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+})
