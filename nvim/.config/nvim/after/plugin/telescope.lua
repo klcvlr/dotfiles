@@ -3,7 +3,14 @@ require('telescope').setup {
   defaults = {
     -- Better for displaying long path in pickers
     path_display = { "smart" }
-  }
+  },
+  pickers = {
+    live_grep = {
+      additional_args = function(opts)
+        return {"--hidden"}
+      end
+    },
+  },
 }
 
 -- Enable telescope fzf native, if installed
@@ -25,7 +32,6 @@ local function find_dotfiles()
     cwd = "~/dotfiles",
     hidden = true,
     file_ignore_patterns = { ".git" },
-    height = 10,
   }
 end
 
@@ -69,4 +75,7 @@ vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, {})
 -- vim.keymap.set('n', '<leader>FS', builtin.lsp_dynamic_workspace_symbols, {})
 
 
+vim.keymap.set('n', '<leader>pv', '<Cmd>Neotree toggle<CR>', {})
 vim.keymap.set('n', '<leader>tr', '<Cmd>TransparentToggle<CR>', {})
+vim.keymap.set('n', '<leader>fml', '<Cmd>CellularAutomaton make_it_rain<CR>', {})
+
