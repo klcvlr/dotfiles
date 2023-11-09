@@ -50,6 +50,9 @@ require('lazy').setup({
     -- Vim transparent
     'xiyaowong/transparent.nvim',
 
+    -- Undo tree
+    'mbbill/undotree',
+
     -- Git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
@@ -81,8 +84,9 @@ require('lazy').setup({
         },
     },
 
+
+    -- Autocompletion
     {
-        -- Autocompletion
         'hrsh7th/nvim-cmp',
         dependencies = {
             -- Snippet Engine & its associated nvim-cmp source
@@ -168,20 +172,15 @@ require('lazy').setup({
         opts = {},
     },
 
-    -- Fuzzy Finder (files, lsp, etc)
+    -- Telescope
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = {
             'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons',
-            -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-            -- Only load if `make` is available. Make sure you have the system
-            -- requirements installed.
             {
                 'nvim-telescope/telescope-fzf-native.nvim',
-                -- NOTE: If you are having trouble with this installation,
-                --       refer to the README for telescope-fzf-native for more instructions.
                 build = 'make',
                 cond = function()
                     return vim.fn.executable 'make' == 1
@@ -209,12 +208,6 @@ require('lazy').setup({
             },
         }
     },
-
-    -- {
-        --     "m4xshen/hardtime.nvim",
-        --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-        --     opts = {}
-        -- },
 
         -- Debugging
         'theHamsta/nvim-dap-virtual-text',
