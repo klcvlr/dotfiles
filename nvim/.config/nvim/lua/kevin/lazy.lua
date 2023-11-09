@@ -211,11 +211,11 @@ require('lazy').setup({
         }
     },
 
-    {
-        "m4xshen/hardtime.nvim",
-        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-        opts = {}
-    },
+    -- {
+    --     "m4xshen/hardtime.nvim",
+    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    --     opts = {}
+    -- },
 
     -- Debugging
     'theHamsta/nvim-dap-virtual-text',
