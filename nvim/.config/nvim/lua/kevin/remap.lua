@@ -7,6 +7,8 @@ vim.g.maplocalleader = ' '
 -- Show Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Quick leave
+vim.keymap.set("n", "QQ", "ZQ", {})
 
 -- Disable inefficient motions
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
