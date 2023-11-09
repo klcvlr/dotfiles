@@ -97,6 +97,12 @@ require('lazy').setup({
     { 'folke/which-key.nvim', opts = {} },
 
     {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {},
+    },
+
+    {
         -- Adds git related signs to the gutter, as well as utilities for managing changes
         'lewis6991/gitsigns.nvim',
         opts = {
@@ -193,6 +199,23 @@ require('lazy').setup({
     },
 
     ----------- Expermenting -----------
+
+    'f-person/git-blame.nvim',
+
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                width = .85,
+            }
+        }
+    },
+
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        opts = {}
+    },
 
     -- Debugging
     'theHamsta/nvim-dap-virtual-text',
