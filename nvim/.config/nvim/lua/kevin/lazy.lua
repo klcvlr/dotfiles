@@ -19,6 +19,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Configure plugins to be lazy-loaded with the 'lazy' module.
 require('lazy').setup({
 
+    -- Theme
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+
     -- harpoon
     'ThePrimeagen/harpoon',
 
@@ -141,9 +145,6 @@ require('lazy').setup({
         },
     },
 
-    -- Theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
     {
         -- Set lualine as statusline
         'nvim-lualine/lualine.nvim',
@@ -199,8 +200,6 @@ require('lazy').setup({
     },
 
     ----------- Expermenting -----------
-
-    'f-person/git-blame.nvim',
 
     {
         "folke/zen-mode.nvim",
