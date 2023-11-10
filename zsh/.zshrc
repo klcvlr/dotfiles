@@ -62,11 +62,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# Always start in a 'default' TMUX session
-if [ -z "$TMUX" ]; then
-  tmux has-session -t default 2>/dev/null && exec tmux attach-session -t default
-  if [ $? != 0 ]; then
-    exec tmux new-session -s default
-  fi
-fi
+# # Always start in a 'default' TMUX session
+# if [ -z "$TMUX" ]; then
+#   tmux has-session -t default 2>/dev/null && exec tmux attach-session -t default
+#   if [ $? != 0 ]; then
+#     exec tmux new-session -s default
+#   fi
+# fi
 
