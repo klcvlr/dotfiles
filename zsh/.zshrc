@@ -8,6 +8,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # Configuration for starship prompt
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
+
+# quick aws profile switcher:
+alias awsp='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)'
+
+
 # Configuration for Volta, the JavaScript Tool Manager
 
 # Initialize starship prompt
