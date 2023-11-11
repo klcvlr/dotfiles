@@ -8,13 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Configuration for starship prompt
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
-
-# quick aws profile switcher:
-alias awsp='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)'
-
-
-# Configuration for Volta, the JavaScript Tool Manager
-
 # Initialize starship prompt
 eval "$(starship init zsh)"
 
@@ -68,6 +61,7 @@ export FZF_DEFAULT_OPTS=" \
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
+# Configuration for Volta, the JavaScript Tool Manager
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
@@ -78,5 +72,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 #     exec tmux new-session -s default
 #   fi
 # fi
-
 
