@@ -28,6 +28,7 @@ plugins=(
   jenv
   kubectl
   minikube
+  poetry
   sdk
   thefuck
   tmux
@@ -75,3 +76,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 #   fi
 # fi
 
+
+# Created by `pipx` on 2023-11-11 13:25:33
+export PATH="$PATH:/Users/kevin/.local/bin"
