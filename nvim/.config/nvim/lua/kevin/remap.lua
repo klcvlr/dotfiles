@@ -39,7 +39,7 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Sessionize (tmux-sessionizer)
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww f<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 
 -- Diagnostic keymaps
