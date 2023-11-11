@@ -45,6 +45,8 @@ source $ZSH/oh-my-zsh.sh
 # Using neovim for vi/vim
 alias vi='nvim'
 alias vim='nvim'
+alias f='tmux-sessionizer'
+alias awsp='. aws-profile-switcher'
 
 # Using alternative tools for file viewing
 alias c='bat'
