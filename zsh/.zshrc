@@ -21,6 +21,7 @@ eval "$(starship init zsh)"
 
 # Oh My Zsh plugins configuration
 plugins=(
+  asdf
   aws
   docker
   docker-compose
@@ -77,5 +78,3 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # fi
 
 
-# Created by `pipx` on 2023-11-11 13:25:33
-export PATH="$PATH:/Users/kevin/.local/bin"
