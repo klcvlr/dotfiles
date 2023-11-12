@@ -6,15 +6,14 @@ fi
 
 if [[ -z $profile ]]; then
     export AWS_PROFILE=""
-    export CODE_ARTIFACT_TOKEN=""
+    # export CODE_ARTIFACT_TOKEN=""
 else
     export AWS_PROFILE="$profile"
-    echo $AWS_PROFILE
  fi
 
-if [[ $profile = "stonal" ]]; then
-    export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain lfn-artifactory --domain-owner 983974232060 --query authorizationToken --output text`
-else
-    export CODEARTIFACT_AUTH_TOKEN=""
- fi
+# if [[ $profile = "stonal" ]]; then
+#     export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain lfn-artifactory --domain-owner 983974232060 --query authorizationToken --output text`
+# else
+#     export CODEARTIFACT_AUTH_TOKEN=""
+#  fi
 

@@ -28,10 +28,10 @@ nnoremap <Leader>r :set rnu!<cr>
 nnoremap <C-H> :action SelectInProjectView<CR>
 
 " Telescope-like
-noremap <Leader>ff :action GotoFile<CR>
+noremap <Leader>sf :action GotoFile<CR>
 noremap <Leader>fg :action FindInPath<CR>
 noremap <Leader>fo :action GotoSymbol<CR>
-noremap <Leader>fu :action FindUsages<CR>
+noremap gr :action FindUsages<CR>
 
 " keymaps to jetbrains actions
 nnoremap <Leader>w :action HideAllWindows<CR>
@@ -39,7 +39,6 @@ nnoremap <Leader>t :action QuickTypeDefinition<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action GotoTypeDeclaration<CR>
-nnoremap go :action Back<CR>
 nnoremap dm :action ToggleBookmark<CR>
 
 " Debug
