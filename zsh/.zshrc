@@ -18,6 +18,7 @@ plugins=(
   aws
   docker
   docker-compose
+  gh
   git
   jenv
   kubectl
@@ -40,6 +41,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias f='tmux-sessionizer'
 alias awsp='. aws-profile-switcher'
+alias ghb='gh browse'
 
 # Using alternative tools for file viewing
 alias c='bat'
