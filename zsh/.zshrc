@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.config"
 export PATH="$HOME/.lkutils/bin:$PATH"
 
 # Path to Oh My Zsh installation

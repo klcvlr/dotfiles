@@ -1,0 +1,17 @@
+k9s:
+  cluster: stonal-nonprod
+  readOnly: false
+  skin: catppuccin
+  namespace:
+    active: dev
+    lockFavorites: true
+    favorites:
+    - all
+    - dev
+    - test
+    - staging
+  view:
+    active: pod dev /doc
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
